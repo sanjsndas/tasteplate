@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - TastePlate — Where Presentation Meets Flavor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --porcelain-white: #FAFAFA;
+            --slate-black: #263238;
+            --plate-accent-gold: #FFD54F;
+            --herb-garden-green: #81C784;
+            --blush-coral: #FF8A65;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            color: var(--slate-black);
+            background-color: var(--porcelain-white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: var(--porcelain-white);
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--slate-black);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--slate-black);
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--plate-accent-gold);
+        }
+
+        .terms-header {
+            background-color: var(--plate-accent-gold);
+            color: var(--slate-black);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .terms-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+
+        .terms-header p {
+            font-size: 1.3em;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .terms-content {
+            padding: 60px 0;
+            line-height: 1.9;
+            font-size: 1.05em;
+            color: #333;
+            text-align: justify;
+        }
+
+        .terms-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--slate-black);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .terms-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: var(--slate-black);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .terms-content p {
+            margin-bottom: 20px;
+        }
+
+        .terms-content ul, .terms-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .terms-content ul li, .terms-content ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .terms-content a {
+            color: var(--blush-coral);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .terms-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer styles (reused from index.html) */
+        footer {
+            background-color: var(--slate-black);
+            color: var(--porcelain-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--plate-accent-gold);
+        }
+
+        .footer-column p, .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-column a:hover {
+            color: var(--plate-accent-gold);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            margin-top: 30px;
+            font-size: 0.9em;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .terms-header h1 {
+                font-size: 2.5em;
+            }
+
+            .terms-header p {
+                font-size: 1.1em;
+            }
+
+            .footer-column {
+                min-width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">TastePlate</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="terms-header">
+            <div class="container">
+                <h1>TastePlate Terms of Service</h1>
+                <p>Welcome to TastePlate! By accessing or using our services, you agree to be bound by these Terms of Service.</p>
+            </div>
+        </section>
+
+        <section class="terms-content">
+            <div class="container">
+                <p><strong>Last Updated: July 4, 2025</strong></p>
+
+                <p>These Terms of Service ("Terms") govern your access to and use of the TastePlate website (the "Site") and any related services provided by TastePlate ("we," "our," or "us"). By accessing or using the Site, you agree to be bound by these Terms, our Privacy Policy, and our Disclaimer. If you do not agree to all of these Terms, do not access or use the Site.</p>
+
+                <p>We may modify these Terms at any time, in our sole discretion. If we do so, we’ll let you know either by posting the modified Terms on the Site or through other communications. It’s important that you review the Terms whenever we modify them because if you continue to use the Site after we have posted modified Terms on the Site, you are indicating that you agree to be bound by the modified Terms. If you don’t agree to be bound by the modified Terms, then you may not use the Site anymore. Because our Site is evolving, we may change or discontinue all or any part of the Site, at any time and without notice, at our sole discretion.</p>
+
+                <h2>1. Acceptance of Terms</h2>
+                <p>By creating an account, accessing, or using the TastePlate website and its associated services (collectively, the "Services"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. These Terms constitute a legally binding agreement between you and TastePlate. If you are using the Services on behalf of an entity, you represent and warrant that you have the authority to bind that entity to these Terms, and "you" and "your" will refer to that entity. Your continued use of the Services signifies your ongoing acceptance of these Terms and any future revisions. It is your responsibility to regularly review these Terms for updates. We reserve the right to update or modify these Terms at any time without prior notice. Any changes will be effective immediately upon posting to the Site. Your continued use of the Services after such modifications will constitute your acknowledgment of the modified Terms and agreement to abide and be bound by them. If you do not agree to the revised Terms, you must stop using the Services. We encourage you to print a copy of these Terms for your records. This agreement also incorporates by reference our Privacy Policy and Disclaimer, which provide additional details about our data handling practices and limitations of liability. By agreeing to these Terms, you also agree to the terms set forth in our Privacy Policy and Disclaimer. These documents collectively form the complete agreement between you and TastePlate regarding your use of the Services. Your access to and use of the Services is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service. We are committed to providing a transparent and fair legal framework for our users. This commitment extends to ensuring that these Terms are accessible, understandable, and reflective of our operational practices. We believe that clear terms are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. Your agreement to these Terms is a prerequisite for enjoying the full range of features and content available on TastePlate. We value your participation and strive to create a positive and secure environment for all users, underpinned by these clear and comprehensive terms. This proactive approach to legal clarity is a core pillar of our overall commitment to user satisfaction and platform integrity. We continuously review and update these Terms to ensure they remain relevant, fair, and compliant with evolving legal standards, demonstrating our dedication to maintaining a robust and trustworthy legal framework for TastePlate. This dedication to legal clarity and user protection is an integral part of our broader commitment to ethical online operations.</p>
+                <p>Your agreement to these Terms extends to all aspects of your interaction with TastePlate, including but not limited to browsing content, creating an account, submitting user-generated content (such as recipes, reviews, or photos), participating in community forums, making purchases through our Product Shop, and engaging with any interactive features. Each of these activities is governed by the principles outlined herein. We aim to provide a consistent and predictable experience for all users, and these Terms serve as the foundation for that consistency. By using our Services, you also confirm that you are of legal age to form a binding contract in your jurisdiction, or if you are a minor, that you have obtained parental or guardian consent to use the Services and agree to these Terms. We reserve the right to refuse service to anyone for any reason at any time. This includes, but is not limited to, instances where we believe a user has violated these Terms, engaged in fraudulent activity, or poses a risk to the security or integrity of our platform or community. Our decisions in such matters are made in our sole discretion. We are committed to enforcing these Terms fairly and consistently to ensure a safe and respectful environment for all users. This commitment to equitable enforcement is a core pillar of our overall commitment to user satisfaction and platform integrity. We continuously review and refine our enforcement procedures to ensure they are transparent, proportionate, and effective in maintaining the high standards of conduct we expect from our community. This proactive approach to platform governance is an integral part of our broader commitment to ethical online operations.</p>
+                <p>Furthermore, these Terms apply to all users, whether you are a casual visitor browsing recipes or a registered member actively contributing content. The scope of these Terms encompasses all current and future features, functionalities, and content offered by TastePlate. As our platform evolves, these Terms will adapt to cover new services and interactions. We encourage all users to familiarize themselves with these Terms to ensure a clear understanding of their rights and responsibilities. Any third-party services or content integrated into TastePlate (e.g., embedded videos, external links) may also be subject to their own terms of service and privacy policies, which you should review independently. TastePlate is not responsible for the practices of third-party services. However, we strive to partner with reputable providers who also uphold high standards of conduct and data protection. This commitment to responsible partnerships is a core pillar of our overall commitment to user satisfaction and platform integrity. We continuously review and vet our third-party integrations to ensure they align with our values and do not compromise the user experience or security. This proactive approach to external service management is an integral part of our broader commitment to ethical online operations. Your acceptance of these Terms signifies your acknowledgment of these aspects of our service provision. We believe that transparency regarding the scope and applicability of our Terms is essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to legal clarity and user protection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>2. User Accounts and Registration</h2>
+                <p>To access certain features of the Site, you may be required to register for an account. When you register, you agree to provide accurate, current, and complete information as prompted by the registration form. You also agree to maintain and promptly update your account information to keep it accurate, current, and complete. If you provide any information that is untrue, inaccurate, not current, or incomplete, or we have reasonable grounds to suspect that such information is untrue, inaccurate, not current, or incomplete, we may suspend or terminate your account and refuse any and all current or future use of the Site (or any portion thereof).</p>
+                <p>You are responsible for maintaining the confidentiality of your account password and are solely responsible for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security. We will not be liable for any loss or damage arising from your failure to comply with this section. You may not use another user's account without permission. TastePlate reserves the right to remove or reclaim any usernames at any time and for any reason, including but not limited to, if we determine that the username is inappropriate, obscene, or otherwise objectionable.</p>
+                <p>Creating an account on TastePlate allows you to personalize your experience, save favorite recipes, track your progress through tutorials, and participate in our vibrant community. When you register, we ask for certain information to establish your unique profile. This information is crucial for providing you with a tailored and efficient service. It is your responsibility to ensure that all information you provide during registration and throughout your use of the Services remains accurate and up-to-date. Inaccurate or incomplete information can hinder our ability to provide you with the best possible service and may lead to the suspension or termination of your account. We are committed to protecting your account information with robust security measures, but your active participation in maintaining account security is equally important. This includes using a strong, unique password and keeping it confidential. We will never ask for your password via email or unofficial channels. Any suspicious activity on your account should be reported to us immediately. This proactive approach to account security, combining our efforts with your vigilance, is a core pillar of our overall commitment to user safety and platform integrity. We continuously review and enhance our account security protocols to ensure compliance with evolving industry standards and best practices, demonstrating our dedication to maintaining a secure environment for all users. This proactive approach to account management is an integral part of our broader commitment to ethical online operations.</p>
+                <p>Your account is personal to you, and you are solely responsible for all activities that occur under your username and password. This includes any content you post, interactions you have, and purchases made. You agree not to share your account credentials with anyone else. Unauthorized use of your account can lead to security risks, including unauthorized access to your personal information or misuse of your account for fraudulent activities. If you suspect any unauthorized use of your account, you must notify us immediately so we can take appropriate action to secure your account and investigate the incident. Failure to do so may result in your liability for losses incurred by TastePlate or others due to such unauthorized use. We reserve the right to suspend or terminate accounts that are found to be shared or compromised due to user negligence. This commitment to individual account responsibility is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously educate our users on best practices for account security and provide tools to help them protect their credentials. This proactive approach to user education is an integral part of our broader commitment to ethical online operations.</p>
+                <p>Furthermore, TastePlate reserves the right to manage and control usernames on our platform. This includes the right to remove, reclaim, or change usernames that are deemed inappropriate, offensive, misleading, or in violation of our community guidelines. This ensures a respectful and professional environment for all users. For example, usernames containing hate speech, explicit content, or impersonating other individuals or brands are strictly prohibited. Our decisions regarding username management are made in our sole discretion and are final. This commitment to maintaining a positive and respectful community is a core pillar of our Terms, ensuring that all users can engage with our platform in a safe and enjoyable manner. We continuously review and update our community guidelines to ensure they remain relevant and effective in fostering a positive online environment. This proactive approach to community governance is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding account registration, security, and username management. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>3. User-Generated Content</h2>
+                <p>Our Site may allow you to submit, upload, publish, or otherwise make available content, including but not limited to text, photographs, videos, recipes, reviews, comments, and other materials ("User Content"). You retain all rights in, and are solely responsible for, the User Content you make available through the Site.</p>
+                <p>By making any User Content available through the Site, you hereby grant to TastePlate a non-exclusive, transferable, sub-licensable, worldwide, royalty-free license to use, copy, modify, create derivative works based upon, distribute, publicly display, publicly perform, and otherwise exploit in any manner such User Content in all formats and distribution channels now known or hereafter devised (including in connection with the Site and TastePlate’s business and on third-party sites and services), without further notice to or consent from you, and without requirement of payment to you or any other person or entity.</p>
+                <p>You represent and warrant that: (i) you are the sole and exclusive owner of all User Content that you make available through the Site or you have all rights, licenses, consents, and releases that are necessary to grant to TastePlate the rights in such User Content, as contemplated under these Terms; and (ii) neither the User Content nor your posting, uploading, publication, submission, or transmittal of the User Content or TastePlate’s use of the User Content (or any portion thereof) will infringe, misappropriate, or violate a third party’s patent, copyright, trademark, trade secret, moral rights, or other proprietary or intellectual property rights, or rights of publicity or privacy, or result in the violation of any applicable law or regulation.</p>
+                <p>You agree not to post, upload, publish, submit, or transmit any User Content that: (i) is fraudulent, false, misleading (directly or by omission or failure to update information), or deceptive; (ii) is defamatory, obscene, pornographic, vulgar, or offensive; (iii) promotes discrimination, bigotry, racism, hatred, harassment, or harm against any individual or group; (iv) is violent or threatening or promotes violence or actions that are threatening to any person or entity; (v) promotes illegal or harmful activities or substances; or (vi) violates any applicable law or regulation.</p>
+                <p>TastePlate reserves the right, but has no obligation, to monitor, review, or edit any User Content. In all cases, we reserve the right to remove or disable access to any User Content for any reason or no reason, including, but not limited to, User Content that, in TastePlate’s sole discretion, violates these Terms. TastePlate may take these actions without prior notification to you. We do not assume any responsibility or liability for User Content, or for any loss or damage resulting from User Content.</p>
+                <p>User-generated content is a cornerstone of the TastePlate community, allowing you to share your culinary creations, insights, and experiences with fellow enthusiasts. When you submit User Content, you retain ownership of your intellectual property rights. However, by making it available through our Services, you grant TastePlate a broad license to use, modify, and distribute that content. This license is essential for us to operate and promote the Site, for example, by featuring your plated dishes in our gallery, sharing your recipe reviews, or using your comments in our blog. This allows your contributions to reach a wider audience and inspire others. We are committed to respecting your intellectual property rights and will only use your content in ways that align with the spirit of our platform. This commitment to responsible content management is a core pillar of our overall commitment to user satisfaction and platform integrity. We continuously review and update our content policies to ensure they remain fair, transparent, and compliant with evolving intellectual property laws, demonstrating our dedication to maintaining a robust and trustworthy legal framework for TastePlate. This proactive approach to content governance is an integral part of our broader commitment to ethical online operations.</p>
+                <p>You are solely responsible for the User Content you submit and the consequences of posting or publishing it. This means you must ensure that your content does not infringe upon the rights of others, including copyright, trademark, privacy, or publicity rights. You must also ensure that your content is not illegal, offensive, harmful, or misleading. We encourage you to only submit content that you have created yourself or for which you have obtained all necessary permissions and licenses. Any User Content that violates these Terms, our community guidelines, or applicable laws may be removed or disabled at our sole discretion, without prior notice. We do not endorse any User Content and expressly disclaim any and all liability in connection with User Content. This commitment to user responsibility for content is a core pillar of our Terms, ensuring a safe and respectful environment for all users. We continuously educate our users on best practices for content creation and submission, and provide tools to help them understand their responsibilities. This proactive approach to user education is an integral part of our broader commitment to ethical online operations.</p>
+                <p>While TastePlate does not actively pre-screen all User Content, we reserve the right to monitor, review, or remove any content that we deem inappropriate or in violation of these Terms. This includes content that is fraudulent, defamatory, obscene, violent, promotes discrimination, or violates any law. Our moderation efforts are aimed at maintaining a positive and respectful community environment. We may take action against User Content and the associated user account if we determine, in our sole discretion, that a violation has occurred. Such actions may include removing the content, suspending, or terminating the user's account. These actions may be taken without prior notification to you. We are not responsible for any loss or damage resulting from User Content or from our actions in relation to User Content. This commitment to content moderation is a core pillar of our Terms, ensuring a safe and respectful environment for all users. We continuously review and refine our moderation procedures to ensure they are transparent, proportionate, and effective in maintaining the high standards of conduct we expect from our community. This proactive approach to platform governance is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding user-generated content, including the rights you grant to us and your responsibilities for the content you submit. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>4. Prohibited Conduct</h2>
+                <p>You agree not to use the Site for any purpose that is unlawful or prohibited by these Terms. You agree not to engage in any of the following activities:</p>
+                <ul>
+                    <li><strong>Illegal Activities:</strong> Engaging in any activity that violates any applicable local, state, national, or international law or regulation.</li>
+                    <li><strong>Harmful Content:</strong> Posting, uploading, or transmitting any content that is harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, or racially, ethnically, or otherwise objectionable.</li>
+                    <li><strong>Impersonation:</strong> Impersonating any person or entity, or falsely stating or otherwise misrepresenting your affiliation with a person or entity.</li>
+                    <li><strong>Unauthorized Access:</strong> Attempting to gain unauthorized access to the Site, other user accounts, or computer systems or networks connected to the Site through hacking, password mining, or any other means.</li>
+                    <li><strong>Interference:</strong> Interfering with or disrupting the integrity or performance of the Site or the data contained therein.</li>
+                    <li><strong>Spamming/Phishing:</strong> Sending unsolicited or unauthorized advertising, promotional materials, email, junk mail, spam, chain letters, or other forms of solicitation. Engaging in phishing, pharming, or any similar deceptive practices.</li>
+                    <li><strong>Malware:</strong> Uploading or transmitting viruses, worms, Trojan horses, or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Site or of any related website, other websites, or the Internet.</li>
+                    <li><strong>Data Collection:</strong> Systematically retrieving data or other content from the Site to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us.</li>
+                    <li><strong>Commercial Use:</strong> Using the Site for any commercial purposes, including selling access to the Site or any content on the Site, without our express written consent.</li>
+                    <li><strong>Intellectual Property Infringement:</strong> Uploading, posting, or otherwise making available any content that infringes any patent, trademark, trade secret, copyright, or other proprietary rights of any party.</li>
+                    <li><strong>Automated Use:</strong> Using any automated system, including without limitation, "robots," "spiders," "offline readers," etc., to access the Site in a manner that sends more request messages to the TastePlate servers in a given period than a human can reasonably produce in the same period by using a conventional web browser.</li>
+                    <li><strong>Circumvention:</strong> Circumventing, disabling, or otherwise interfering with security-related features of the Site, including features that prevent or restrict use or copying of any content or enforce limitations on use of the Site and/or the content contained therein.</li>
+                    <li><strong>Resale/Redistribution:</strong> Reproducing, duplicating, copying, selling, reselling, or exploiting any portion of the Service, use of the Service, or access to the Service without express written permission by us.</li>
+                    <li><strong>Harassment/Abuse:</strong> Harassing, annoying, intimidating, or threatening any of our employees or agents engaged in providing any portion of the Site to you.</li>
+                </ul>
+                <p>Engaging in any of the prohibited conduct listed above may result in the immediate suspension or termination of your account, removal of your User Content, and/or legal action, at our sole discretion. We are committed to maintaining a safe, respectful, and functional environment for all users. This commitment to enforcing appropriate conduct is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and refine our enforcement procedures to ensure they are transparent, proportionate, and effective in maintaining the high standards of conduct we expect from our community. This proactive approach to platform governance is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding prohibited conduct. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+                <p>The list of prohibited conduct is designed to protect the integrity of TastePlate, our users, and our intellectual property. Engaging in illegal activities, such as fraud, hacking, or distributing malicious software, is strictly forbidden and will result in immediate termination of your account and potential reporting to law enforcement. We maintain robust security systems to detect and prevent such activities, but your cooperation in reporting suspicious behavior is also crucial. Similarly, any content that is harmful, abusive, or discriminatory goes against the inclusive and respectful community we aim to foster. We have a zero-tolerance policy for hate speech, harassment, and any form of bullying. Users found to be engaging in such behavior will have their content removed and their accounts terminated. This commitment to fostering a positive and inclusive community is a core pillar of our Terms, ensuring a safe and respectful environment for all users. We continuously review and update our community guidelines to ensure they remain relevant and effective in maintaining the high standards of conduct we expect from our community. This proactive approach to platform governance is an integral part of our broader commitment to ethical online operations.</p>
+                <p>Impersonation of other individuals or entities is also strictly prohibited, as it can be misleading and harmful to other users. We encourage authenticity and transparency in all interactions on TastePlate. Any attempts to interfere with the proper functioning of the Site, such as disrupting our servers or engaging in excessive data collection (scraping) without permission, are considered serious violations and will be met with appropriate action. Our resources are dedicated to providing a high-quality service to all legitimate users, and activities that undermine this goal will not be tolerated. Furthermore, unauthorized commercial use of the Site, including reselling access or content, without our express written consent, is a violation of our intellectual property rights and will be pursued legally. TastePlate is a platform for culinary inspiration and community, not for unauthorized commercial exploitation. This commitment to protecting our intellectual property and ensuring fair use of our services is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously monitor for violations of these terms and take swift action to protect our platform and community. This proactive approach to platform governance is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding prohibited conduct. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>5. Intellectual Property Rights</h2>
+                <p>Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the "Content") and the trademarks, service marks, and logos contained therein (the "Marks") are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws of the United States, foreign jurisdictions, and international conventions.</p>
+                <p>The Content and the Marks are provided on the Site "AS IS" for your information and personal use only. Except as expressly provided in these Terms, no part of the Site and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.</p>
+                <p>Provided that you are eligible to use the Site, you are granted a limited license to access and use the Site and to download or print a copy of any portion of the Content to which you have properly gained access solely for your personal, non-commercial use. We reserve all rights not expressly granted to you in and to the Site, the Content and the Marks.</p>
+                <p>All content on TastePlate, including recipes, articles, tutorials, images, videos, and design elements, is protected by intellectual property laws. This means that the content is either owned by TastePlate or licensed to us. Your use of the Site grants you a limited, non-exclusive, non-transferable license to access and use the content for your personal, non-commercial purposes only. You may not copy, reproduce, distribute, modify, or create derivative works from our content without our express written permission. This includes, but is not limited to, scraping content for commercial databases, republishing articles on other websites, or using our images for your own commercial projects. We actively monitor for intellectual property infringement and will take appropriate legal action against any unauthorized use of our content. This commitment to protecting our intellectual property is a core pillar of our Terms, ensuring the sustainability and integrity of our platform. We continuously review and update our intellectual property protection strategies to ensure they remain robust and effective in the evolving digital landscape, demonstrating our dedication to maintaining a secure and trustworthy legal framework for TastePlate. This proactive approach to intellectual property rights is an integral part of our broader commitment to ethical online operations.</p>
+                <p>The "TastePlate" name, logo, and all related product and service names, design marks, and slogans are the trademarks or registered trademarks of TastePlate. You may not use any of our trademarks without our prior written permission. Any unauthorized use of our trademarks or copyrighted material may lead to legal action. We invest significant resources in creating high-quality, original content and building our brand, and we expect our users to respect these efforts. This commitment to protecting our brand and creative assets is a core pillar of our Terms, ensuring the sustainability and integrity of our platform. We continuously monitor for unauthorized use of our brand assets and take swift action to protect our intellectual property. This proactive approach to brand protection is an integral part of our broader commitment to ethical online operations.</p>
+                <p>While you retain ownership of your User Content (as outlined in Section 3), by submitting it to TastePlate, you grant us a necessary license to use it to operate and promote the Site. This allows us to feature your recipes, photos, and reviews, which benefits both you (by increasing your visibility) and the TastePlate community (by enriching our content). However, this license does not transfer ownership to us. We are committed to using your User Content responsibly and in ways that align with the spirit of our platform. This commitment to fair use of user-generated content is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our content usage policies to ensure they remain fair, transparent, and compliant with evolving intellectual property laws, demonstrating our dedication to maintaining a robust and trustworthy legal framework for TastePlate. This proactive approach to content governance is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding intellectual property rights. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>6. Site Management</h2>
+                <p>We reserve the right, but not the obligation, to: (1) monitor the Site for violations of these Terms; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Terms, including without limitation, reporting such user to law enforcement authorities; (3) in our sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your contributions or any portion thereof; (4) in our sole discretion and without limitation, notice, or liability, to remove from the Site or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the Site in a manner designed to protect our rights and property and to facilitate the proper functioning of the Site.</p>
+                <p>TastePlate reserves the right to manage the Site to ensure its proper functioning, security, and compliance with these Terms. This includes monitoring user activity for violations, taking legal action where necessary, and managing content to maintain platform performance. We may, at our sole discretion, remove or disable access to any content or user account that violates our policies, without prior notice. This ensures a safe and functional environment for all users. Our commitment to effective site management is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and refine our site management procedures to ensure they are transparent, proportionate, and effective in maintaining the high standards of conduct we expect from our community. This proactive approach to platform governance is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding site management. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+                <p>Our site management practices are designed to protect the integrity of TastePlate and its users. This includes actively monitoring for spam, fraudulent activities, and any behavior that could compromise the security or performance of our platform. We utilize automated systems and human review to identify and address violations promptly. In severe cases, or when required by law, we may report users to law enforcement authorities. Our goal is to create a secure and reliable environment where users can engage with confidence. This commitment to proactive security and compliance is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our security protocols to ensure they remain robust and effective in the evolving digital landscape, demonstrating our dedication to maintaining a secure and trustworthy legal framework for TastePlate. This proactive approach to platform security is an integral part of our broader commitment to ethical online operations.</p>
+                <p>We also reserve the right to manage the technical aspects of the Site, including managing storage space and content size. This means we may remove or disable content that is excessively large or burdensome to our systems, impacting overall performance. This is done to ensure that the Site remains fast, responsive, and accessible for all users. Our decisions in these matters are made in our sole discretion and are aimed at optimizing the user experience. This commitment to technical efficiency is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and refine our technical management procedures to ensure they are transparent, proportionate, and effective in maintaining the high standards of performance we expect from our community. This proactive approach to platform optimization is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding site management. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>7. Privacy Policy and Disclaimer</h2>
+                <p>We care about data privacy and security. Please review our <a href="privacy.html">Privacy Policy</a> and <a href="disclaimer.html">Disclaimer</a>. By using the Site, you agree to be bound by our Privacy Policy and Disclaimer, which are incorporated into these Terms of Service. Please be advised the Site is hosted in [Your Country]. If you access the Site from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in [Your Country], then through your continued use of the Site, you are transferring your data to [Your Country], and you expressly consent to have your data transferred to and processed in [Your Country].</p>
+                <p>Your privacy and the security of your data are of utmost importance to us. Our Privacy Policy details how we collect, use, disclose, and protect your personal information. It also outlines your rights regarding your data and how you can exercise them. Our Disclaimer provides important limitations on liability and disclaimers of warranties regarding the content and services provided on TastePlate. By using our Site, you acknowledge that you have read and understood both our Privacy Policy and Disclaimer, and you agree to their terms. These documents are integral parts of your agreement with TastePlate. We encourage you to review them thoroughly to understand our data handling practices and the legal framework governing your use of the Services. This commitment to transparency and user awareness is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our Privacy Policy and Disclaimer to ensure they remain relevant, accurate, and compliant with evolving legal standards, demonstrating our dedication to maintaining a robust and trustworthy legal framework for TastePlate. This proactive approach to legal clarity is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding privacy and disclaimers. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+                <p>Please be aware that TastePlate is hosted in [Your Country]. If you are accessing our Site from a different country, your data will be transferred to and processed in [Your Country]. By continuing to use the Site, you explicitly consent to this data transfer and processing. We implement robust security measures to protect your data during transfer and storage, regardless of your geographical location. Our data processing activities are governed by the laws of [Your Country]. This transparency regarding data residency and international data transfers is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our data transfer mechanisms to ensure they remain compliant with evolving international data protection regulations, demonstrating our dedication to maintaining a robust and trustworthy legal framework for TastePlate. This proactive approach to international data handling is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding data transfer. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>8. Term and Termination</h2>
+                <p>These Terms of Service shall remain in full force and effect while you use the Site. WITHOUT LIMITING ANY OTHER PROVISION OF THESE TERMS OF SERVICE, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, DENY ACCESS TO AND USE OF THE SITE (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY REASON OR FOR NO REASON, INCLUDING WITHOUT LIMITATION FOR BREACH OF ANY REPRESENTATION, WARRANTY, OR COVENANT CONTAINED IN THESE TERMS OF SERVICE OR OF ANY APPLICABLE LAW OR REGULATION. WE MAY TERMINATE YOUR USE OR PARTICIPATION IN THE SITE OR DELETE YOUR ACCOUNT AND ANY CONTENT OR INFORMATION THAT YOU POSTED AT ANY TIME, WITHOUT WARNING, IN OUR SOLE DISCRETION.</p>
+                <p>If we terminate or suspend your account for any reason, you are prohibited from registering and creating a new account under your name, a fake or borrowed name, or the name of any third party, even if you may be acting on behalf of the third party. In addition to terminating or suspending your account, we reserve the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress.</p>
+                <p>These Terms remain in effect as long as you use the Site. TastePlate reserves the right to suspend or terminate your access to the Site and your account at any time, for any reason, or no reason, without notice or liability. This includes, but is not limited to, violations of these Terms, illegal activities, or any conduct that we deem harmful to our community or platform. Upon termination, your right to use the Site will immediately cease. We may also delete your account and any content you have posted. If your account is terminated or suspended, you are prohibited from creating new accounts. We may also pursue legal action if necessary. This commitment to enforcing our Terms is a core pillar of our overall commitment to user satisfaction and platform integrity. We continuously review and refine our termination procedures to ensure they are transparent, proportionate, and effective in maintaining the high standards of conduct we expect from our community. This proactive approach to platform governance is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding term and termination. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+                <p>The termination of your account may result in the forfeiture and destruction of all information associated with your account. While we will deactivate or delete your account and information from our active databases upon termination, some information may be retained in our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce our Terms of Service, and/or comply with legal requirements. This retention is always in accordance with applicable laws and our data retention policies, and the retained data is subject to the same strict security measures. We are committed to transparency regarding data retention after account termination, ensuring you are fully informed about how your data is managed. This commitment to user control and transparent data management is a core pillar of our privacy policy, reinforcing your trust in TastePlate. We regularly review and update our data retention policies to ensure compliance with evolving privacy regulations and best practices, demonstrating our dedication to safeguarding your information even after account closure. This proactive approach to data management is a critical component of our overall privacy framework, reinforcing your trust in TastePlate. We believe that providing clear options for managing and deleting your account information is fundamental to building a trustworthy and user-centric platform. This commitment to user control is a core pillar of our data privacy philosophy, ensuring that your preferences are always honored.</p>
+                <p>In the event of termination or suspension, you agree that you will not attempt to register a new account under your name, a fake or borrowed name, or the name of any third party. Any attempts to circumvent a termination or suspension will be considered a further violation of these Terms and may result in additional legal action. We reserve the right to track and identify users who attempt to bypass account suspensions. This commitment to enforcing our termination policy is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously monitor for violations of these terms and take swift action to protect our platform and community. This proactive approach to platform governance is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding term and termination. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>9. Modifications and Interruptions</h2>
+                <p>We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Site. We also reserve the right to modify or discontinue all or part of the Site without notice at any time. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Site.</p>
+                <p>We cannot guarantee the Site will be available at all times. We may experience hardware, software, or other problems or need to perform maintenance related to the Site, resulting in interruptions, delays, or errors. We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Site at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Site during any downtime or discontinuance of the Site. Nothing in these Terms of Service will be construed to obligate us to maintain and support the Site or to supply any corrections, updates, or releases in connection therewith.</p>
+                <p>TastePlate reserves the right to modify, suspend, or discontinue any aspect of the Site at any time, with or without notice. This includes changing features, content, or even discontinuing the entire service. We will not be liable to you or any third party for any such modifications or interruptions. While we strive for continuous availability, we cannot guarantee that the Site will always be accessible. Interruptions may occur due to maintenance, technical issues, or other unforeseen circumstances. You agree that we are not liable for any loss or inconvenience caused by such downtime. This commitment to operational flexibility is a core pillar of our Terms, ensuring the sustainability and adaptability of our platform. We continuously monitor our systems and plan for maintenance to minimize interruptions, but we cannot eliminate them entirely. This proactive approach to platform management is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding modifications and interruptions. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+                <p>We are constantly working to improve TastePlate and may introduce new features, content, or services. These updates may require temporary interruptions for implementation. We will endeavor to provide notice of planned maintenance whenever possible, but unforeseen issues may arise. Your understanding and patience during such times are appreciated. Our goal is always to enhance your experience, and these modifications are a necessary part of that process. This commitment to continuous improvement is a core pillar of our Terms, ensuring the sustainability and adaptability of our platform. We continuously review and refine our development and deployment procedures to ensure they are transparent, proportionate, and effective in delivering high-quality updates to our community. This proactive approach to platform evolution is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding modifications and interruptions. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>10. Governing Law</h2>
+                <p>These Terms of Service and your use of the Site are governed by and construed in accordance with the laws of [Your Country/State], applicable to agreements made and to be entirely performed within [Your Country/State], without regard to its conflict of law principles.</p>
+                <p>Any disputes arising from these Terms or your use of the Site will be subject to the exclusive jurisdiction of the courts located in [Your City/State], [Your Country]. This commitment to a clear legal framework is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our legal framework to ensure it remains robust and effective in the evolving digital landscape, demonstrating our dedication to maintaining a secure and trustworthy legal framework for TastePlate. This proactive approach to legal clarity is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding governing law. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>11. Dispute Resolution</h2>
+                <p>Any legal action of whatever nature brought by either you or us (collectively, the “Parties” and individually, a “Party”) shall be commenced or prosecuted in the state and federal courts located in [Your City/State], [Your Country], and the Parties hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non conveniens with respect to venue and jurisdiction in such state and federal courts. Application of the United Nations Convention on Contracts for the International Sale of Goods and the Uniform Computer Information Transaction Act are excluded from these Terms of Service.</p>
+                <p>In the event of any dispute arising under or in connection with these Terms, both you and TastePlate agree to first attempt to resolve the dispute informally through good-faith negotiations. If a dispute cannot be resolved informally within a reasonable period, then either Party may initiate formal legal proceedings. The exclusive venue for any legal action will be the courts located in [Your City/State], [Your Country]. By agreeing to these Terms, you waive any right to object to the jurisdiction or venue of these courts. This commitment to a clear dispute resolution process is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our dispute resolution mechanisms to ensure they remain robust and effective in the evolving digital landscape, demonstrating our dedication to maintaining a secure and trustworthy legal framework for TastePlate. This proactive approach to legal clarity is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding dispute resolution. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>12. Corrections</h2>
+                <p>There may be information on the Site that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the Site at any time, without prior notice.</p>
+                <p>We strive to provide accurate and up-to-date information on TastePlate. However, errors, inaccuracies, or omissions may occasionally occur, including in recipe descriptions, product pricing, or availability. We reserve the right to correct any such errors at any time without prior notice. This ensures that the information presented on our Site is as precise and reliable as possible. We are committed to maintaining the quality and accuracy of our content. This commitment to accuracy is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our content to ensure it remains accurate and effective in providing valuable information to our community. This proactive approach to content management is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding corrections. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>13. Miscellaneous</h2>
+                <p>These Terms of Service and any policies or operating rules posted by us on the Site or in respect to the Site constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any right or provision of these Terms of Service shall not operate as a waiver of such right or provision. These Terms of Service operate to the fullest extent permissible by law. We may assign any or all of our rights and obligations to others at any time. We shall not be responsible or liable for any loss, damage, delay, or failure to act caused by any cause beyond our reasonable control. If any provision or part of a provision of these Terms of Service is determined to be unlawful, void, or unenforceable, that provision or part of the provision is deemed severable from these Terms of Service and does not affect the validity and enforceability of any remaining provisions. There is no joint venture, partnership, employment, or agency relationship created between you and us as a result of these Terms of Service or use of the Site. You agree that these Terms of Service will not be construed against us by virtue of having drafted them. You hereby waive any and all defenses you may have based on the electronic form of these Terms of Service and the lack of signing by the parties hereto to execute these Terms of Service.</p>
+                <p>These Terms, along with our Privacy Policy and Disclaimer, constitute the entire agreement between you and TastePlate. Our failure to enforce any provision of these Terms does not waive our right to enforce it later. These Terms are legally binding to the fullest extent permitted by law. We may transfer our rights and obligations under these Terms to another entity. We are not liable for delays or failures caused by circumstances beyond our reasonable control. If any part of these Terms is found to be unenforceable, the remaining provisions will remain in effect. No partnership, employment, or agency relationship is created between you and us. You agree that these Terms will not be construed against us simply because we drafted them. You waive any defenses based on the electronic form of these Terms or the lack of physical signatures. This commitment to a comprehensive and legally sound agreement is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our legal framework to ensure it remains robust and effective in the evolving digital landscape, demonstrating our dedication to maintaining a secure and trustworthy legal framework for TastePlate. This proactive approach to legal clarity is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding miscellaneous provisions. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+                <p>The "Miscellaneous" section covers various standard legal clauses that ensure the comprehensive and enforceable nature of these Terms. For instance, the "entire agreement" clause confirms that these Terms, along with the Privacy Policy and Disclaimer, represent the complete understanding between you and TastePlate, superseding any prior discussions or agreements. The "no waiver" clause clarifies that even if we don't immediately enforce a particular right or provision, it doesn't mean we've given up that right for the future. This flexibility allows us to manage the platform effectively without inadvertently waiving important protections. The "severability" clause ensures that if any part of these Terms is found to be invalid or unenforceable, the rest of the Terms will still remain in full force and effect, maintaining the overall integrity of the agreement. This prevents the entire agreement from being invalidated by a single problematic clause. These provisions are crucial for providing a stable and predictable legal framework for your use of TastePlate. This commitment to legal robustness is a core pillar of our Terms, ensuring a fair and secure environment for all users. We continuously review and update our legal framework to ensure it remains robust and effective in the evolving digital landscape, demonstrating our dedication to maintaining a secure and trustworthy legal framework for TastePlate. This proactive approach to legal clarity is an integral part of our broader commitment to ethical online operations. Your agreement to these Terms signifies your understanding and acceptance of our policies regarding miscellaneous provisions. We believe that clear guidelines in these areas are essential for building a trustworthy and reliable platform for our community of culinary enthusiasts. This dedication to user responsibility and platform integrity is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h2>14. Contact Us</h2>
+                <p>If you have questions or comments about these Terms of Service, please contact us at:</p>
+                <p><strong>TastePlate Headquarters</strong><br>
+                123 Culinary Arts Street,<br>
+                Flavorville, FS 12345, India</p>
+                <p>Email: <a href="mailto:terms@tasteplate.com">terms@tasteplate.com</a><br>
+                Phone: +91 98765 43210</p>
+                <p>We are committed to responding to your inquiries promptly and addressing any concerns you may have regarding these Terms. Your feedback is invaluable in helping us maintain the highest standards of transparency and fairness. We encourage open communication and are always available to clarify any aspect of these Terms or our operational practices. Our dedicated legal and support teams are trained to assist you with requests related to these Terms. We strive to make our legal documents as clear and accessible as possible, and direct communication is a key component of this commitment. This dedication to user support and open dialogue is a core pillar of our Terms, reinforcing your trust in TastePlate. We regularly review our contact procedures to ensure they are efficient and responsive, demonstrating our dedication to safeguarding your information. This proactive approach to user support is a critical component of our overall legal framework, reinforcing your trust in TastePlate. We believe that providing clear and accessible contact channels is fundamental to building a trustworthy and user-centric platform. This commitment to open communication is a core pillar of our ethical online operations, ensuring that your questions and concerns are always addressed with care and professionalism.</p>
+                <p>When you contact us with questions or comments about these Terms, please provide as much detail as possible to help us understand your inquiry fully. This will enable us to investigate thoroughly and provide you with a comprehensive and accurate response. We treat all legal inquiries with the utmost confidentiality and professionalism. Our internal processes ensure that your query is directed to the appropriate team member who has the expertise to assist you. We aim to acknowledge your request promptly and provide a substantive response within a reasonable timeframe, in accordance with applicable laws and regulations. Your understanding of these Terms is paramount, and we are dedicated to facilitating your comprehension of them. This commitment to empowering your understanding of our legal framework is a fundamental aspect of our Terms, reflecting our belief that you should have full clarity regarding your rights and responsibilities. We continuously train our teams on the latest legal developments and best practices to ensure they are equipped to handle all types of inquiries effectively. This proactive approach to legal support is an integral part of our broader commitment to ethical online operations, ensuring that your information is protected and your choices are respected at every interaction with TastePlate.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-column">
+                <h3>TastePlate</h3>
+                <p>"Where Presentation Meets Flavor."</p>
+                <p>Inspiring culinary creativity, one plate at a time.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#recipe-library">Recipe Library</a></li>
+                    <li><a href="#styling-tutorials">Styling Tutorials</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#community-gallery">User Showcase</a></li>
+                    <li><a href="#tasteplate-shop">Product Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>TastePlate Headquarters</p>
+                <p>123 Culinary Arts Street,</p>
+                <p>Flavorville, FS 12345, India</p>
+                <p>Email: <a href="mailto:info@tasteplate.com">info@tasteplate.com</a></p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 TastePlate. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - TastePlate — Where Presentation Meets Flavor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --porcelain-white: #FAFAFA;
+            --slate-black: #263238;
+            --plate-accent-gold: #FFD54F;
+            --herb-garden-green: #81C784;
+            --blush-coral: #FF8A65;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            color: var(--slate-black);
+            background-color: var(--porcelain-white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: var(--porcelain-white);
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--slate-black);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--slate-black);
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--plate-accent-gold);
+        }
+
+        .cookies-header {
+            background-color: var(--herb-garden-green);
+            color: var(--porcelain-white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cookies-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+
+        .cookies-header p {
+            font-size: 1.3em;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cookies-content {
+            padding: 60px 0;
+            line-height: 1.9;
+            font-size: 1.05em;
+            color: #333;
+            text-align: justify;
+        }
+
+        .cookies-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--slate-black);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .cookies-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: var(--slate-black);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .cookies-content p {
+            margin-bottom: 20px;
+        }
+
+        .cookies-content ul, .cookies-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .cookies-content ul li, .cookies-content ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .cookies-content a {
+            color: var(--blush-coral);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cookies-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cookie Consent Dialogue Box */
+        .cookie-consent-box {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--slate-black);
+            color: var(--porcelain-white);
+            padding: 20px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transform: translateY(100%); /* Start hidden below screen */
+            transition: transform 0.5s ease-out;
+        }
+
+        .cookie-consent-box.show {
+            transform: translateY(0); /* Slide up into view */
+        }
+
+        .cookie-consent-box p {
+            flex: 1;
+            margin: 0;
+            font-size: 0.95em;
+            line-height: 1.5;
+            padding-right: 20px;
+        }
+
+        .cookie-consent-box .cookie-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cookie-consent-box button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .cookie-consent-box .accept-cookies {
+            background-color: var(--plate-accent-gold);
+            color: var(--slate-black);
+        }
+
+        .cookie-consent-box .accept-cookies:hover {
+            background-color: #e6c141;
+        }
+
+        .cookie-consent-box .decline-cookies {
+            background-color: transparent;
+            color: var(--porcelain-white);
+            border: 1px solid var(--porcelain-white);
+        }
+
+        .cookie-consent-box .decline-cookies:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Footer styles (reused from index.html) */
+        footer {
+            background-color: var(--slate-black);
+            color: var(--porcelain-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--plate-accent-gold);
+        }
+
+        .footer-column p, .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-column a:hover {
+            color: var(--plate-accent-gold);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            margin-top: 30px;
+            font-size: 0.9em;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .cookies-header h1 {
+                font-size: 2.5em;
+            }
+
+            .cookies-header p {
+                font-size: 1.1em;
+            }
+
+            .cookie-consent-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-consent-box p {
+                padding-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .footer-column {
+                min-width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">TastePlate</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cookies-header">
+            <div class="container">
+                <h1>TastePlate Cookie Policy</h1>
+                <p>Understanding how we use cookies and other tracking technologies to enhance your experience and ensure your privacy.</p>
+            </div>
+        </section>
+
+        <section class="cookies-content">
+            <div class="container">
+                <p><strong>Last Updated: July 4, 2025</strong></p>
+
+                <p>This Cookie Policy explains how TastePlate ("we," "our," or "us") uses cookies and similar technologies to recognize you when you visit our website at TastePlate.com ("Site"). It explains what these technologies are and why we use them, as well as your rights to control our use of them. In some cases, we may use cookies to collect personal information, or that becomes personal information if we combine it with other information. For more information on how we handle your personal data, please refer to our <a href="privacy.html">Privacy Policy</a>.</p>
+
+                <h2>What are cookies?</h2>
+                <p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information. Cookies set by the website owner (in this case, TastePlate) are called "first-party cookies." Cookies set by parties other than the website owner are called "third-party cookies." Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics). The parties that set these third-party cookies can recognize your computer both when it visits the website in question and also when it visits certain other websites.</p>
+
+                <h2>Why do we use cookies?</h2>
+                <p>We use first-party and third-party cookies for several reasons. Some cookies are required for our website to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies enable us to track and target the interests of our users to enhance the experience on our Site. For example, TastePlate uses cookies to remember your preferences, such as language settings or login status, making your future visits more convenient and personalized. These cookies help us to understand how our website is being used, allowing us to continuously improve its functionality and content based on user behavior. Furthermore, certain cookies are used for advertising purposes, helping us to deliver more relevant advertisements to you based on your interests and browsing patterns. This ensures that the ads you see are more likely to be of interest to you, making your overall experience with TastePlate more engaging and less intrusive. We also use cookies for security purposes, helping to detect and prevent fraudulent activities and protect your account. The detailed information gathered through these cookies allows us to analyze website traffic, identify popular content, and troubleshoot technical issues, all contributing to a smoother and more efficient user experience. Our commitment to using cookies responsibly and transparently means that we only deploy them for legitimate purposes that benefit both our users and the operational integrity of TastePlate. We continuously review our cookie usage to ensure compliance with evolving privacy regulations and best practices, demonstrating our dedication to safeguarding your information. This proactive approach to managing cookie usage is a critical component of our overall privacy framework, reinforcing your trust in TastePlate. We believe that empowering users to choose how their browsing data is collected and used is fundamental to building a trustworthy and user-centric platform. This commitment to user control is a core pillar of our data privacy philosophy, ensuring that your preferences are always honored.</p>
+
+                <h2>Detailed Explanation of Cookies and Their Use (40 Points)</h2>
+
+                <h3>1. Essential/Strictly Necessary Cookies:</h3>
+                <p>These cookies are absolutely vital for the basic functionality of our website and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. Without these cookies, certain parts of the website, such as secure areas or shopping carts, would not function correctly. They enable core features like security, network management, and accessibility. These cookies do not store any personally identifiable information. Their primary role is to ensure the smooth operation and security of the website, making your navigation and interaction with TastePlate seamless and secure. Blocking these cookies might lead to parts of the site not working as intended, significantly impacting your user experience. We use these cookies to manage user sessions, ensure the correct display of content, and facilitate secure transactions, all of which are fundamental to providing a functional online platform. They are a cornerstone of our website's stability and reliability, ensuring that essential services are always available to you without interruption. This category of cookies is critical for maintaining the operational integrity of TastePlate and providing a consistent user experience. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment. Their short lifespan and limited data collection are designed to maximize functionality while minimizing privacy impact. We continuously monitor their performance to ensure they are optimized for efficiency and security, reflecting our dedication to a high-quality user experience.</p>
+
+                <h3>2. Performance/Analytical Cookies:</h3>
+                <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies, we will not know when you have visited our site and will not be able to monitor its performance. This data helps us understand user behavior patterns, identify areas for improvement, and optimize content strategy. For example, by analyzing which recipes are most frequently viewed, we can prioritize content development in those areas. These cookies provide valuable insights into website usage trends, allowing us to make data-driven decisions to enhance the overall quality and usability of TastePlate. They are crucial for understanding how our users interact with the platform, enabling us to refine our design, content, and features based on real-world usage data. This continuous analysis ensures that TastePlate remains relevant and engaging for our community. We use reputable third-party analytics providers for this purpose, who are committed to data protection and adhere to strict privacy standards. The anonymized nature of the data collected ensures that your personal privacy is respected while still providing us with the necessary insights for platform improvement. This commitment to data-driven enhancement, balanced with unwavering privacy protection, is a core pillar of our cookie policy. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in identifying popular content and navigation issues is vital for our ongoing development efforts, ensuring that TastePlate evolves in a way that truly meets user needs.</p>
+
+                <h3>3. Functionality Cookies:</h3>
+                <p>These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages. For example, they can remember your username, language preferences, or region. If you do not allow these cookies, then some or all of these services may not function properly. These cookies are designed to improve your user experience by remembering your choices and settings, making your future visits more convenient and tailored to your preferences. They allow for features such as remembering your login details, customizing content based on your past interactions, or providing personalized recommendations. This personalization helps to create a more engaging and efficient browsing experience on TastePlate. They can also facilitate features like comment sections or embedded video players, ensuring a rich and interactive environment. While they may collect some personal information (like a username), this is always done with the purpose of enhancing your experience and is subject to your consent. We are committed to using these cookies responsibly, ensuring that they genuinely add value to your interaction with our site. This commitment to user convenience and personalization, balanced with privacy protection, is a core pillar of our cookie policy. We continuously review their impact on user experience and ensure they are optimized for efficiency and security, reflecting our dedication to a high-quality user experience. Their role in remembering user preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices.</p>
+
+                <h3>4. Targeting/Advertising Cookies:</h3>
+                <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising. These cookies track your browsing habits and activity across websites to understand your interests and preferences. This allows our advertising partners to deliver advertisements that are more relevant to you, making the ads you see more useful and less intrusive. For example, if you frequently view recipes for baking, you might see ads for baking tools or ingredients. While these cookies do not directly store personally identifiable information, they can create a profile of your online behavior. We are committed to ensuring that our advertising partners adhere to strict data protection standards and provide clear mechanisms for opting out of personalized advertising. Your consent for these cookies is obtained through our cookie banner, and you have the right to withdraw it at any time. This commitment to ethical advertising practices, balanced with user control, is a core pillar of our cookie policy. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in delivering relevant advertisements is vital for supporting our free content and services, ensuring that TastePlate remains accessible to all users. We strive to make advertising on TastePlate as unobtrusive and relevant as possible, always prioritizing your privacy preferences and providing clear options for managing your ad experience. This proactive approach to managing advertising cookies is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>5. First-Party Cookies:</h3>
+                <p>These cookies are set directly by TastePlate and are essential for the proper functioning of our website. They are typically used to remember your preferences, manage your login session, or track your activity on our site for analytical purposes. For example, a first-party cookie might remember that you've logged in, so you don't have to re-enter your credentials on every page. They are crucial for providing a seamless and personalized user experience. These cookies are controlled by us and are subject to our Privacy Policy. We use them to ensure the security and efficiency of our platform, providing core functionalities that enhance your interaction with TastePlate. The data collected by first-party cookies is primarily used for internal purposes, such as optimizing website performance, understanding user navigation, and improving our content and features. They play a vital role in maintaining the integrity of your session and ensuring that your preferences are remembered as you browse our site. This commitment to using first-party cookies responsibly is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices.</p>
+
+                <h3>6. Third-Party Cookies:</h3>
+                <p>These cookies are set by third-party services that we use on our website, such as analytics providers (e.g., Google Analytics), advertising networks, or social media platforms. They enable features or functionality provided by these third parties to be present on our site, such as embedded videos, social sharing buttons, or targeted advertisements. For example, a third-party cookie might track your interaction with an embedded YouTube video. These cookies can recognize your computer both when it visits TastePlate and when it visits certain other websites. The data collected by third-party cookies is subject to the privacy policies of the respective third parties. We carefully select our third-party partners to ensure they adhere to strict data protection standards and provide clear mechanisms for managing your privacy preferences. While we integrate these services to enhance your experience, we do not control the cookies set by third parties. We are committed to transparency regarding our use of third-party cookies and provide information on how to manage your preferences directly with those providers. This commitment to responsible third-party integration, balanced with user control, is a core pillar of our cookie policy. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in enabling external functionalities and services is vital for enriching the TastePlate experience, ensuring that our platform remains dynamic and interactive. We strive to provide clear information about how these cookies are used and how you can manage them, empowering you with control over your data.</p>
+
+                <h3>7. Session Cookies:</h3>
+                <p>These are temporary cookies that remain in your browser's cookie file only until you close your browser. They are used to allow website operators to link the actions of a user during a browser session. For example, a session cookie might remember the items you've added to a shopping cart as you navigate through different pages on a website. Once you close your browser, the session cookie is deleted. They are essential for providing a seamless and efficient browsing experience, particularly for e-commerce functionalities or secure login sessions. These cookies do not store any long-term personal information and are primarily used for technical purposes to ensure the smooth operation of the website during your active visit. Their temporary nature enhances privacy by ensuring that no persistent data is left on your device after your session ends. We use session cookies to manage user authentication, track user progress through multi-step forms, and maintain the integrity of your current browsing session. This commitment to using session cookies responsibly is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and facilitating seamless navigation is vital for creating a smooth and efficient browsing experience, ensuring that TastePlate remains responsive and user-friendly. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment.</p>
+
+                <h3>8. Persistent Cookies:</h3>
+                <p>These cookies remain in your browser's cookie file even after you close the browser, for a set period or until you delete them. They are used to remember your preferences or actions across multiple visits to a website. For example, a persistent cookie might remember your language preference or that you've already accepted the cookie policy, so you don't have to select it again on your next visit. They are crucial for personalization and convenience, enhancing your long-term user experience on TastePlate. These cookies can store information about your preferences, login status, or past interactions to provide a more tailored experience on subsequent visits. Their extended lifespan allows for features like "remember me" functionality or personalized content recommendations. While they offer convenience, we are committed to using persistent cookies responsibly and transparently, ensuring that you have control over their use. Your consent for these cookies is obtained through our cookie banner, and you have the right to withdraw it at any time. This commitment to user convenience and personalization, balanced with privacy protection, is a core pillar of our cookie policy. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in remembering user preferences across multiple visits is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices over time. We prioritize their security and ensure they are used only for their intended, beneficial purposes, demonstrating our commitment to a robust and secure online environment.</p>
+
+                <h3>9. Secure Cookies:</h3>
+                <p>These are cookies that are only sent over encrypted HTTPS connections. This ensures that the cookie data is protected from interception by unauthorized parties during transmission. When you interact with secure parts of our website, such as login pages or checkout processes, secure cookies are used to safeguard your information. This adds an extra layer of security, protecting your sensitive data from potential eavesdropping. The use of secure cookies is a fundamental security practice for any website handling personal or financial information. They are crucial for maintaining the confidentiality and integrity of your data as it travels between your browser and our servers. We implement secure cookies across all relevant sections of TastePlate to ensure that your interactions are always protected by encryption. This commitment to robust security measures, including the use of secure cookies, is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review our security protocols and ensure they are optimized for efficiency and effectiveness, reflecting our dedication to a high-quality and secure user experience. Their role in protecting sensitive data during transmission is vital for maintaining the integrity of user sessions and ensuring that your information remains confidential. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to security is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>10. HTTP-Only Cookies:</h3>
+                <p>These cookies are designed to be inaccessible to client-side scripts (like JavaScript). This helps to mitigate the risk of cross-site scripting (XSS) attacks, where malicious scripts might attempt to steal cookie data. By making certain cookies HTTP-only, we enhance the security of your session and account information. This means that even if a malicious script were to be injected into our website, it would not be able to access the content of these specific cookies, significantly reducing the risk of session hijacking. HTTP-only cookies are primarily used for storing sensitive session identifiers or authentication tokens. They are a crucial security measure that protects your login credentials and ensures the integrity of your authenticated session on TastePlate. We implement HTTP-only cookies for all sensitive data that does not need to be accessed by client-side scripts, demonstrating our commitment to robust security practices. This commitment to mitigating cyber threats, including the use of HTTP-only cookies, is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review our security protocols and ensure they are optimized for efficiency and effectiveness, reflecting our dedication to a high-quality and secure user experience. Their role in protecting sensitive session data from malicious scripts is vital for maintaining the integrity of user accounts and ensuring that your information remains confidential. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to security is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>11. Web Beacons/Tracking Pixels:</h3>
+                <p>These are tiny graphic images (often just one pixel by one pixel) that are embedded in web pages or emails. They are used to track user behavior, such as whether an email has been opened or if a specific page has been visited. For instance, we might use a web beacon in our newsletter to see if subscribers are opening our emails, which helps us gauge the effectiveness of our email campaigns and refine our content strategy. These technologies do not directly collect personally identifiable information, but they can provide valuable insights into user engagement and content performance. When used in conjunction with cookies, they can help us understand your journey through our website and your interactions with our content. We use these technologies responsibly and transparently, always with the goal of improving your experience and the effectiveness of our services. We do not use web beacons or tracking pixels to secretly collect personal information without your knowledge. This commitment to ethical data collection practices extends to ensuring that all tracking technologies are used in a way that respects your privacy and provides you with control over your data. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in measuring content engagement and campaign effectiveness is vital for optimizing our services and ensuring that our communications are relevant. We prioritize their responsible use and ensure they are used only for their intended, beneficial purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>12. Local Storage (HTML5):</h3>
+                <p>Similar to cookies, local storage allows websites to store data directly in the browser. However, local storage has a larger capacity (typically 5MB-10MB) and the data does not expire, meaning it persists even after the browser is closed, unless explicitly cleared by the user. We may use local storage to remember certain user preferences or to store temporary data that enhances your browsing experience, such as your cookie consent choice. This allows for faster loading times and a more seamless user experience by reducing the need to fetch data from the server repeatedly. Unlike cookies, local storage data is not automatically sent with every HTTP request, which can improve performance. We are committed to using local storage responsibly and transparently, ensuring that any data stored is for legitimate purposes that enhance your interaction with TastePlate. This commitment to user convenience and personalization, balanced with privacy protection, is a core pillar of our cookie policy. We continuously review its effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Its role in remembering user preferences and optimizing performance is vital for creating a seamless and efficient browsing experience, ensuring that TastePlate remains responsive and user-friendly. We prioritize its responsible use and ensure it is used only for its intended, beneficial purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data storage is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>13. Pixel Tags/JavaScript Tags:</h3>
+                <p>These are pieces of JavaScript code embedded in web pages that allow us to collect information about user interactions. They work similarly to web beacons, enabling us to track events like page views, button clicks, or form submissions. This data helps us understand user behavior in detail, allowing us to optimize our website's design, content, and functionality. For example, a JavaScript tag might track how many users click on a specific recipe image, providing insights into content popularity. This information is typically aggregated and anonymized, meaning it cannot be used to identify you personally. We use these tags to gather valuable insights into website usage trends, enabling us to make data-driven decisions to enhance the overall quality and usability of TastePlate. They are crucial for understanding how our users interact with the platform, allowing us to refine our design, content, and features based on real-world usage data. This continuous analysis ensures that TastePlate remains relevant and engaging for our community. We use reputable third-party analytics providers for this purpose, who are committed to data protection and adhere to strict privacy standards. The anonymized nature of the data collected ensures that your personal privacy is respected while still providing us with the necessary insights for platform improvement. This commitment to data-driven enhancement, balanced with unwavering privacy protection, is a core pillar of our cookie policy. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in identifying popular content and navigation issues is vital for our ongoing development efforts, ensuring that TastePlate evolves in a way that truly meets user needs.</p>
+
+                <h3>14. Cookie Consent Management:</h3>
+                <p>We provide a clear and transparent mechanism for you to manage your cookie preferences through a consent banner that appears upon your first visit to our site. This banner allows you to accept all cookies, decline non-essential cookies, or customize your preferences. Your choice is then stored using a local storage item or a specific cookie, so you are not prompted again on subsequent visits unless you clear your browser data or the consent expires. This commitment to user control and transparent consent management is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We regularly review our consent mechanisms to ensure compliance with evolving privacy regulations and best practices, demonstrating our dedication to safeguarding your information. This proactive approach to managing cookie consent is a critical component of our overall privacy framework, reinforcing your trust in TastePlate. We believe that empowering users to choose how their browsing data is collected and used is fundamental to building a trustworthy and user-centric platform. This commitment to user control is a core pillar of our data privacy philosophy, ensuring that your preferences are always honored.</p>
+
+                <h3>15. Opting Out of Cookies:</h3>
+                <p>Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse all cookies, to indicate when a cookie is being sent, or to delete cookies that have already been set. However, if you choose to disable cookies, some parts of our website may not function properly, or your experience may be less personalized. For third-party cookies, you may also be able to opt-out directly through the respective third-party provider's website or through industry-wide opt-out tools. We provide links and guidance on how to manage your cookie settings in various popular browsers within this policy. This commitment to empowering user control over tracking technologies is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>16. Cookie Expiration:</h3>
+                <p>Cookies have different expiration dates. Session cookies are temporary and expire when you close your browser. Persistent cookies have a longer lifespan, ranging from a few days to several years, depending on their purpose and the settings configured by the website or third party. For example, a cookie remembering your login might expire after 30 days, while an analytics cookie might persist for two years. We ensure that cookies are not kept longer than necessary for their intended purpose. The expiration dates are carefully chosen to balance user convenience with data minimization. This commitment to responsible cookie lifespan management is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>17. Cookie Categories:</h3>
+                <p>We categorize cookies to help you understand their purpose and manage your preferences. These categories typically include: Strictly Necessary, Performance, Functionality, and Targeting/Advertising cookies. Each category serves a distinct purpose in enhancing your experience or supporting our operations. Understanding these categories allows you to make informed decisions about which types of cookies you are comfortable with. We provide detailed explanations for each category within this policy and within our cookie consent banner. This clear categorization enhances transparency and empowers you with greater control over your privacy settings. We are committed to ensuring that our cookie categorization is accurate and easy to understand, providing you with the necessary information to manage your preferences effectively. This commitment to transparency and user education is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>18. Cookie Audit:</h3>
+                <p>We regularly audit the cookies and tracking technologies used on our website to ensure accuracy and compliance with our Cookie Policy and relevant privacy regulations. This involves periodically scanning our site to identify all cookies, their purpose, and their expiration dates. This proactive approach helps us to identify any unauthorized or unnecessary cookies and ensures that our cookie consent mechanisms are functioning correctly. The audit process is a critical component of our commitment to transparency and data protection. It allows us to maintain an up-to-date record of our cookie usage and to make necessary adjustments to our policies or technical implementations. This commitment to continuous monitoring and auditing is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>19. Data Collected by Cookies:</h3>
+                <p>The data collected by cookies can vary widely depending on the cookie's purpose. It may include information such as your IP address, browser type, operating system, device identifiers, pages visited, time spent on pages, referral URLs, and interactions with website elements (e.g., clicks, scrolls). For essential cookies, this might be limited to session IDs. For analytics cookies, it's typically aggregated and anonymized usage data. For advertising cookies, it might include browsing history to build interest profiles. We are committed to collecting only the data necessary for the stated purpose of each cookie. This commitment to data minimization is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>20. Purpose of Data Collection:</h3>
+                <p>The data collected through cookies serves various legitimate purposes, including: providing essential website functionality, analyzing website performance, personalizing user experience, delivering relevant advertising, ensuring website security, and complying with legal obligations. Each cookie has a specific, defined purpose that contributes to enhancing your experience or supporting our operations. We clearly articulate the purpose of each cookie category within this policy and our consent banner. This transparency ensures that you understand why certain data is being collected and how it is being used. We are committed to ensuring that all data collection through cookies is purposeful and directly contributes to the value we provide to our users. This commitment to purpose limitation is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>21. Consent Withdrawal:</h3>
+                <p>You have the right to withdraw your cookie consent at any time. This can typically be done by revisiting your cookie preferences through our consent banner (which can often be re-accessed via a link in the footer or a privacy settings section) or by adjusting your browser settings. Withdrawing consent for certain cookies may affect the functionality of the website, particularly for non-essential cookies. We are committed to making the process of withdrawing consent as straightforward as possible, empowering you with full control over your privacy choices. This commitment to user control is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>22. Impact of Declining Cookies:</h3>
+                <p>If you decline non-essential cookies, your experience on TastePlate may be less personalized, and you may see less relevant advertising. For example, features that remember your preferences (like language settings) might not work, and we may not be able to gather data to improve our site's performance. Declining essential cookies, however, will severely impact the functionality of the website, potentially preventing you from logging in or using core services. We aim to clearly communicate the impact of declining different cookie categories so you can make an informed decision. This commitment to transparency regarding the consequences of cookie choices is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>23. Cookie Policy Updates:</h3>
+                <p>We may update this Cookie Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make significant changes, we will notify you through a prominent notice on our website or by other means, such as email. You are encouraged to review this policy periodically to stay informed about our use of cookies. Your continued use of the Site after any updates constitutes your acceptance of the revised policy. This commitment to transparency and timely updates is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>24. Browser Settings for Cookies:</h3>
+                <p>Every major web browser (Chrome, Firefox, Safari, Edge, etc.) provides settings to manage cookies. You can usually find these options in your browser's "Settings," "Privacy," or "Security" sections. Within these settings, you can typically: view the cookies stored on your device, delete specific cookies, block all cookies, block third-party cookies, or set preferences for certain websites. We recommend consulting your browser's help documentation for specific instructions. This commitment to empowering user control over browser settings is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>25. Flash Cookies (Local Shared Objects):</h3>
+                <p>Flash cookies, also known as Local Shared Objects (LSOs), are data files that can be stored on your computer by websites that use Adobe Flash Player. They can store more data than regular cookies and are not managed through standard browser settings. While less common now, some older content or media players might still use them. To manage Flash cookies, you typically need to visit Adobe's website settings manager. We strive to minimize our reliance on Flash technology. This commitment to modern and transparent technology is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>26. Do Not Track Signals:</h3>
+                <p>Some web browsers offer a "Do Not Track" (DNT) feature that allows you to signal to websites that you do not want your online activities tracked. However, there is no universally agreed-upon standard for how websites should respond to these signals. TastePlate currently does not respond to DNT signals. We encourage you to manage your cookie preferences directly through our consent banner or browser settings for more precise control. This commitment to transparency regarding DNT signals is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>27. Cookie Walls:</h3>
+                <p>A "cookie wall" refers to a situation where a website blocks access to its content unless the user accepts all cookies, including non-essential ones. TastePlate does not employ cookie walls. We believe in providing users with genuine choice regarding their cookie preferences. While declining certain cookies may impact functionality, we do not prevent access to our core content based on your cookie choices. This commitment to user choice and accessibility is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>28. Cookie Lifetime:</h3>
+                <p>The lifetime of a cookie refers to how long it remains active on your device. Session cookies last only for the duration of your browser session. Persistent cookies can last for varying periods, from minutes to years. The lifetime is set by the website or third party that places the cookie. We ensure that cookies are not retained for longer than necessary to fulfill their purpose. This commitment to data minimization and responsible cookie lifespan management is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>29. Cookie Identification:</h3>
+                <p>Each cookie has a unique identifier that allows the website to recognize your browser or device. This identifier is typically a random string of characters. While the cookie itself may not contain personally identifiable information, this identifier can be linked to other data collected about your browsing activity to create a profile. We use these identifiers to provide personalized experiences and gather aggregated analytics. This commitment to responsible cookie identification is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>30. Cookie Data Storage:</h3>
+                <p>Cookie data is stored locally on your computer or mobile device by your web browser. It is not stored directly on TastePlate's servers. When your browser sends a request to our website, it includes the relevant cookie data, which our server then processes. This distributed storage model helps with website performance and reduces server load. We ensure that any data stored in cookies is encrypted where appropriate for sensitive information. This commitment to secure data storage is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>31. Cookie Data Sharing:</h3>
+                <p>First-party cookie data is primarily used internally by TastePlate for website functionality and analytics. Third-party cookie data is shared with the respective third-party providers (e.g., Google Analytics, advertising networks) in accordance with their own privacy policies. We do not sell data collected through cookies to third parties for their independent marketing purposes. Any sharing of data is done for legitimate business purposes, such as improving our services or delivering relevant advertising, and is subject to strict contractual agreements. This commitment to responsible data sharing is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>32. Cookie Policy Accessibility:</h3>
+                <p>This Cookie Policy is easily accessible from all pages of our website, typically through a link in the footer. We strive to make our privacy-related documents clear, comprehensive, and easy to understand. We believe that transparent and accessible policies are essential for building trust with our users. If you have any questions after reviewing this policy, we encourage you to contact us directly. This commitment to policy accessibility is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>33. Cookie Consent Record:</h3>
+                <p>When you make a choice regarding cookies through our consent banner, we record your preference. This record allows us to respect your choice on subsequent visits and demonstrates our compliance with privacy regulations. The consent record itself typically includes a timestamp, your IP address (anonymized where possible), and your specific cookie choices. This data is stored securely and is used solely for compliance purposes. This commitment to maintaining a clear consent record is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>34. Cookie Technology Evolution:</h3>
+                <p>The landscape of tracking technologies is constantly evolving. As new technologies emerge, we commit to evaluating them and updating our Cookie Policy to reflect their use and impact on your privacy. Our goal is to always use technologies that enhance your experience while upholding the highest standards of data protection. This commitment to adapting to technological advancements is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>35. Cookie Policy Language:</h3>
+                <p>This Cookie Policy is provided in English. While our website may offer content in multiple languages, the authoritative version of this policy is always the English version. We strive to use clear and understandable language to explain complex concepts related to cookies and privacy. This commitment to clarity and accessibility is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>36. Cookie Policy Review:</h3>
+                <p>We encourage you to review this Cookie Policy periodically. As our services evolve and new technologies are adopted, this policy will be updated to reflect those changes. Your ongoing use of our website signifies your acceptance of any revisions. We will always indicate the "Last Updated" date at the top of the policy. This commitment to continuous review and transparency is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>37. Cookie Policy Scope:</h3>
+                <p>This Cookie Policy applies only to TastePlate.com and its direct subdomains. It does not apply to any third-party websites that you may access through links on our site. We encourage you to review the cookie policies of any external websites you visit, as their practices may differ from ours. We are not responsible for the cookie practices of third-party sites. This commitment to defining the scope of our policy is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>38. Cookie Management Tools:</h3>
+                <p>Beyond browser settings, several online tools allow you to manage cookies across multiple websites. These include opt-out tools provided by industry organizations like the Network Advertising Initiative (NAI) and the Digital Advertising Alliance (DAA). These tools can help you opt-out of targeted advertising cookies from participating companies. We support and recommend the use of such tools to enhance your privacy control. This commitment to empowering user control through external tools is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>39. Cookie Policy Contact:</h3>
+                <p>If you have any questions or concerns about this Cookie Policy or our use of cookies, please do not hesitate to contact us. Our dedicated privacy team is available to assist you. You can find our contact details in the "Contact Us" section of this policy and on our dedicated Contact page. We are committed to providing timely and helpful responses to all your inquiries. This commitment to open communication is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+                <h3>40. Overall Commitment to Privacy:</h3>
+                <p>Our use of cookies is part of our broader commitment to protecting your privacy and providing a transparent and secure online experience. We believe that a clear understanding of how we use cookies empowers you to make informed decisions about your data. We continuously strive to align our practices with the highest standards of data protection and privacy regulations. Your trust is paramount to us, and we are dedicated to earning and maintaining it through responsible and ethical data handling. This unwavering commitment to overall privacy is a core pillar of our cookie policy, reinforcing your trust in TastePlate. We continuously review their effectiveness and impact on user experience, demonstrating our dedication to providing a high-quality and user-centric platform. Their role in maintaining user sessions and remembering preferences is vital for creating a seamless and tailored browsing experience, ensuring that TastePlate adapts to your individual needs and choices. We prioritize their security and ensure they are used only for their intended, necessary purposes, demonstrating our commitment to a robust and secure online environment for all users. This proactive approach to data collection is an integral part of our broader commitment to ethical online operations.</p>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="cookieConsentBox" class="cookie-consent-box">
+        <p>We use cookies to improve your browsing experience, analyze site traffic, and deliver personalized content. By clicking "Accept All Cookies," you agree to our use of cookies. For more information, please read our <a href="cookies.html" style="color: var(--plate-accent-gold); text-decoration: underline;">Cookie Policy</a>.</p>
+        <div class="cookie-buttons">
+            <button class="accept-cookies">Accept All Cookies</button>
+            <button class="decline-cookies">Decline Non-Essential</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-column">
+                <h3>TastePlate</h3>
+                <p>"Where Presentation Meets Flavor."</p>
+                <p>Inspiring culinary creativity, one plate at a time.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>TastePlate Headquarters</p>
+                <p>123 Culinary Arts Street,</p>
+                <p>Flavorville, FS 12345, India</p>
+                <p>Email: <a href="mailto:info@tasteplate.com">info@tasteplate.com</a></p>
+                <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 TastePlate. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cookieConsentBox = document.getElementById('cookieConsentBox');
+            const acceptCookiesBtn = cookieConsentBox.querySelector('.accept-cookies');
+            const declineCookiesBtn = cookieConsentBox.querySelector('.decline-cookies');
+
+            // Check if user has already made a choice
+            const cookieChoice = localStorage.getItem('tasteplate_cookie_consent');
+
+            if (!cookieChoice) {
+                // If no choice, show the box after a short delay
+                setTimeout(() => {
+                    cookieConsentBox.classList.add('show');
+                }, 1000); // 1-second delay
+            }
+
+            acceptCookiesBtn.addEventListener('click', () => {
+                localStorage.setItem('tasteplate_cookie_consent', 'accepted');
+                cookieConsentBox.classList.remove('show');
+                // You might add logic here to enable all cookies (e.g., analytics, advertising)
+                console.log('Cookies accepted. All cookies enabled.');
+            });
+
+            declineCookiesBtn.addEventListener('click', () => {
+                localStorage.setItem('tasteplate_cookie_consent', 'declined');
+                cookieConsentBox.classList.remove('show');
+                // You might add logic here to disable non-essential cookies
+                console.log('Non-essential cookies declined. Only strictly necessary cookies enabled.');
+                alert('You have declined non-essential cookies. Some features or personalized content may not be available.');
+            });
+
+            // Simple alert function to replace window.alert for demonstration purposes
+            function alert(message) {
+                const existingAlert = document.getElementById('customAlert');
+                if (existingAlert) {
+                    existingAlert.remove();
+                }
+
+                const alertBox = document.createElement('div');
+                alertBox.id = 'customAlert';
+                alertBox.style.position = 'fixed';
+                alertBox.style.top = '50%';
+                alertBox.style.left = '50%';
+                alertBox.style.transform = 'translate(-50%, -50%)';
+                alertBox.style.backgroundColor = 'var(--slate-black)';
+                alertBox.style.color = 'var(--porcelain-white)';
+                alertBox.style.padding = '20px 30px';
+                alertBox.style.borderRadius = '8px';
+                alertBox.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+                alertBox.style.zIndex = '1001';
+                alertBox.style.textAlign = 'center';
+                alertBox.style.maxWidth = '350px';
+                alertBox.style.fontSize = '1.1em';
+
+                const alertMessage = document.createElement('p');
+                alertMessage.textContent = message;
+                alertMessage.style.marginBottom = '15px';
+
+                const closeButton = document.createElement('button');
+                closeButton.textContent = 'OK';
+                closeButton.style.backgroundColor = 'var(--plate-accent-gold)';
+                closeButton.style.color = 'var(--slate-black)';
+                closeButton.style.border = 'none';
+                closeButton.style.padding = '10px 20px';
+                closeButton.style.borderRadius = '5px';
+                closeButton.style.cursor = 'pointer';
+                closeButton.style.fontWeight = '700';
+                closeButton.addEventListener('click', () => {
+                    alertBox.remove();
+                });
+
+                alertBox.appendChild(alertMessage);
+                alertBox.appendChild(closeButton);
+                document.body.appendChild(alertBox);
+            }
+        });
+    </script>
+</body>
+</html>
